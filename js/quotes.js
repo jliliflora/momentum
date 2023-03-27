@@ -21,7 +21,7 @@ const quotes = [
     },
     {
     quote: 'The fastest way to change yourself is to hang out with people who are already the way you want to be',
-    author: 'REid Hoffman'
+    author: 'Reid Hoffman'
     },
     {
     quote: 'Money is like gasoline during a road trip. You do not want to run out of gas on your trip, but you are not doing a tour of gas stations',
@@ -33,7 +33,7 @@ const quotes = [
     },
     {
     quote: 'The only thing worse than starting something and falling.. is not starting something',
-    author: 'SEth Godin'
+    author: 'Seth Godin'
     },
     {
     quote: 'If you really want to do something, you will find a way. If you do not, you will find an excuse.',
@@ -44,4 +44,8 @@ const quotes = [
 const quote = document.querySelector("#quote span:first-child");
 const second = document.querySelector("#quote span:last-child");
 
-console.log(quotes[0-9]);
+const todayQuotes = quotes[Math.floor(Math.random() * quotes.length)];
+
+quote.innerText = todayQuotes.quote;
+second.innerText = todayQuotes.author;
+
