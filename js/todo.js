@@ -2,10 +2,12 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
-const toDos = [];
+const TODOS_KEY = "todos"
+
+const toDos = []; // 여기서 항상 초기화를 해주면 새로고침하고 리스트를 추가하면 덮어쓰여지게되는것!
 
 function saveToDos() {
-    localStorage.setItem("todos", JSON.stringify(toDos));
+    localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
 function deleteToDo() {
@@ -35,3 +37,22 @@ function handleToDoSubmit() {
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+/*
+function sayHello(item) {
+    console.log("this is the trun of", item);
+} //parsedToDos의 item을 가지고 오는거임 내장되어있는 파라미터?라고 봐도 되는듯 submit처럼!
+*/
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+console.log(savedToDos);
+
+if(savedToDos) {
+    const parsedToDos = JSON.parse(savedToDos);
+    // console.log(parsedToDos);
+
+    // parsedToDos.forEach(sayHello); 함수 안쓰고 밑에 화살표함수로 짧게 씀!!!
+    // parsedToDos.forEach((item) => console.log("this is the turn of", item));
+    parsedToDos.forEach(paintToDo);
+}
