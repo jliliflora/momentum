@@ -8,7 +8,7 @@ const USERNAME_KEY = "username";
 
 // 3단계
 function onLoginSubmit(event) {
-    event.preventDefault(); //-> event가 원래하는 행동을 멈춰준다.
+    event.preventDefault(); //-> event가 원래하는 행동을 멈춰준다. form태그엔 submit이라고 하는 이벤트를 가지는데, submit의 기본 동작은 새로고침을 하는 것인데 원하지않는 액션이라 막아주는 것이당
     loginForm.classList.add(HIDDEN_CLASSNAME); //-> form을 다시 숨긴다.
     const username = loginInput.value; //->username이라는 변수로 value를 저장한다.
     localStorage.setItem(USERNAME_KEY, username); //-> username값을 username이라는 key와 함께 local storage에 저장한다.
