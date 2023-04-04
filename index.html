@@ -4,22 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Momentum App</title>
 </head>
 <body>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form class="hidden" id="login-form">
-        <input 
-            required 
-            maxlength="15" 
-            type="text" 
-            placeholder="what is your name?"
-        />
-        <!-- <button>Log In</button> -->
-        <input type="submit" value="Log In"/>
-    </form>
+
+    <div id="weather">
+        <span class="temp"></span>
+        <span class="city"></span>
+        <span class="icon"></span>
+    </div>
+
+    <div class="container">
+        <h2 id="clock">00:00</h2>
+        <h1 id="greeting" class="hidden"></h1>
+        <form class="hidden" id="login-form">
+            <input 
+                class="input1"
+                required 
+                maxlength="15" 
+                type="text" 
+                placeholder="Type your name here!"
+            />
+
+            <input class="hidden" type="submit" value="Log In"/>
+        </form>
+        
+    </div>
+
+
+    
+    <!--
     <form id="todo-form">
         <input type="text" placeholder="Write a To Do and Press Enter" required/>
     </form>
@@ -28,6 +44,12 @@
         <span></span>
         <span></span>
     </div>
+
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+-->
     
     <!-- <a href="https://nomadcoders.co">Go to courses</a> -->
 
