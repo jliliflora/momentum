@@ -10,6 +10,7 @@
 body {
     background-color: beige;
     overflow: hidden;
+    animation: fadeIn 0.5s linear;
 }
 
 .hidden {
