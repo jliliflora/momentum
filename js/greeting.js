@@ -31,8 +31,24 @@ link.addEventListener("click", handleLinkClick);
 // 4단계
 // 비어있는 h1 요소 안에 `hello ${username}`이라는 텍스트를 추가해줌
 function paintGreetings(username) {
+    //시간 받아오기
+    const date = new Date();
+    const hours = date.getHours();
+    let mention = 'Hello';
+
+    if (5 <= hours && hours < 12) {
+        // 시간이 5시~12시이면 굿모닝
+        mention = 'Good morning';
+    } else if (12 <= hours && hours < 21) {
+        // 12시부터 21시까지는 굿애프터눈
+        mention = 'Good afternoon';
+    } else {
+        //0~5시 이전이거나 20시 이후에는 굿나잇
+        mention = 'Good night';
+    }
+
     // greeting.innerText = "HELLO " + username;
-    greeting.innerText = `Hello ${username}!`; // 변수명과 string을 함께 사용해야할때 니꼬는 이걸 선호한디야 변수명을 사용할때는 ${} => 이 규칙만 따라주면 됨
+    greeting.innerText = `${mention}, ${username}!`; // 변수명과 string을 함께 사용해야할때 니꼬는 이걸 선호한디야 변수명을 사용할때는 ${} => 이 규칙만 따라주면 됨
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 

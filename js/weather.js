@@ -1,4 +1,5 @@
 const API_KEY = "ce785cba3bc0a9dab5e3ee8c1de58740";
+const noti = document.querySelector("#weather .weather-noti");
 const weather = document.querySelector("#weather .temp");
 const city = document.querySelector("#weather .city");
 const icon = document.querySelector("#weather .icon");
@@ -14,19 +15,23 @@ function onGeoOk(position) {
     fetch(url)
     .then((response) => response.json())
     .then((data) => {
+        noti.classList.add("hidden");
+
         city.innerText = data.name;
         weather.innerText = `${data.main.temp}°`;
 
-        const icon = data.weather[0].icon;
-        console.log(icon);
-        
-        const span = document.createElement("span");
-        console.log(span);
-        span.id = "test"
-        console.log(span.id);
+        const weatherIcon = data.weather[0].icon;
+        const weatherIconAdrs = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+
+        console.log(weatherIcon);
+        console.log(weatherIconAdrs);
+
+        icon.setAttribute('src', weatherIconAdrs);
+
 
     });
 }
+
 function onGeoError() {
     alert("Can't find you. No wather for you");
 }

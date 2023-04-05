@@ -11,9 +11,16 @@
 <body>
 
     <div id="weather">
-        <span class="temp"></span>
+        <span class="weather-noti">
+            Please allow location permission setting!
+        </span>
+        <div class="weather-cont">
+            <span class="icon-cont">
+                <img class="icon">
+            </span>
+            <span class="temp"></span>
+        </div>
         <span class="city"></span>
-        <span class="icon"></span>
     </div>
 
     <div class="container">
@@ -25,31 +32,22 @@
                 required 
                 maxlength="15" 
                 type="text" 
-                placeholder="Type your name here!"
+                placeholder=" Type your name here!"
             />
 
             <input class="hidden" type="submit" value="Log In"/>
         </form>
-        
+
+        <form id="todo-form">
+            <input class="input1" type="text" placeholder="💫Write a To Do Here" required/>
+        </form>    
+        <ul id="todo-list"></ul> 
     </div>
 
-
-    
-    <!--
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required/>
-    </form>
-    <ul id="todo-list"></ul>
     <div id="quote">
         <span></span>
         <span></span>
-    </div>
-
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div>
--->
+    </div>  
     
     <!-- <a href="https://nomadcoders.co">Go to courses</a> -->
 
