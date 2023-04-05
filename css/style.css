@@ -34,6 +34,69 @@ img {
     flex-direction: column;
 }
 
+#weather {
+    position: fixed;
+    top: 0.5vh;
+    right: 0.75vw;
+    width: fit-content;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#weather .weather-cont {
+    position: relative;
+    width: 6.5rem;
+    height: 3rem;
+}
+#weather .weather-cont .icon-cont {
+    position: absolute;
+    top: 0;
+    left: -0.2rem;
+}
+#weather .weather-cont .icon-cont .icon {
+    position: relative;
+    width: 3rem;
+}
+#weather .weather-cont .temp {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.1rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+#weather .weather-cont .city {
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+
+
+#quote {
+    position: fixed;
+    bottom: 0.5vh;
+    left: 50%;
+    transform: translateX( -50% );
+    width: fit-content;
+    color: #fff;
+    opacity: 50%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    white-space: nowrap;
+}
+#quote span:last-child {
+    font-size: 0.5rem;
+}
+
+
+
+
+
+
 #clock {
     color: #fff;
     /* border: 1px solid red; */
@@ -43,59 +106,65 @@ img {
     font-family: 'Montserrat', sans-serif;
 }
 #greeting {
-    /* border: 1px solid blue; */
     color: #fff;
     font-size: 1.5rem;
     font-family: 'NEXON Lv1 Gothic OTF';
     font-weight: 300;
 }
-#login-form {
-    /* border: 1px solid orange; */
-}
-#login-form .input1 {
-    width: 265px;
-    height: 30px;
+
+
+
+.input1 {
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 1px solid #fff;
     background: transparent;
     font-family: 'Montserrat', sans-serif;
-    /* color: #fff; */
     outline: none;
     color: #fff;
+}
+.input1::placeholder {
+    opacity: 0.75;
+    color: #fff;
+}
+
+#login-form {
+    /* border: 1px solid orange; */
+}
+#login-form .input1 {
+    width: 17rem;
+    height: 30px;
     font-size: 1.5rem;
 }
 #login-form .input1::placeholder {
-    opacity: 0.75;
-    color: #fff;
     font-size: 1.5rem;
 }
 #login-form .submit {
     display: hidden;
 }
 
-#weather {
-    position: fixed;
-    top: 0.5vh;
-    right: 0.5vw;
-    width: fit-content;
-    border: 1px solid red;
-    color: #fff;
+
+
+#todo-form {
+    margin: 2rem 0 1.2rem 0;
+}
+#todo-form .input1 {
+    width: 11rem;
+    font-size: 0.8rem;
+}
+#todo-form .input1::placeholder {
     font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-.temp{
-    font-weight: 500;
-    font-size: 22px;
+#todo-list {
+    color: #fff;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 0.9rem;
 }
-
-.city{
-    font-weight: 300;
-    font-size: 12px;
+#todo-list button {
+    background: transparent;
+    border: none;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
 }
